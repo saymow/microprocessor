@@ -1,0 +1,7 @@
+.\src\alu.vhd
+.\src\mux4.vhd
+.\src\dp.vhd
+.\src\acc.vhd
+.\src\reg_file.vhd
+.\src\shifter.vhd
+.\src\tristatebuffer.vhd

@@ -1,0 +1,7 @@
+i<>.\src\ula.vhd
+i<>.\src\mux4.vhd
+i<>.\src\datapath.vhd
+i<>.\src\acc.vhd
+i<>.\src\ref_file.vhd
+i<>.\src\shifter.vhd
+i<>.\src\tristatebuffer.vhd

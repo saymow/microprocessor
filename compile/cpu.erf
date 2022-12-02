@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: C:/My_Designs/cpu/src/dp.vhd" 
+MESSAGE "Compile Entity "dp"" 
+MESSAGE "Compile Architecture "struct" of Entity "dp"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]" 
