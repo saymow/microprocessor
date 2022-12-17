@@ -6,3 +6,5 @@
 .\src\shifter.vhd
 .\src\tristatebuffer.vhd
 .\src\ctrl.vhd
+.\src\cpu.vhd
+.\src\computer.vhd

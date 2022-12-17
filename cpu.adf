@@ -28,6 +28,8 @@ FAMILY=Altera MAX7000
 /shifter.vhd=-1
 /tristatebuffer.vhd=-1
 /ctrl.vhd=-1
+/cpu.vhd=-1
+/computer.vhd=-1
 [Files.Data]
 .\src\alu.vhd=VHDL Source Code
 .\src\mux4.vhd=VHDL Source Code
@@ -37,7 +39,24 @@ FAMILY=Altera MAX7000
 .\src\shifter.vhd=VHDL Source Code
 .\src\tristatebuffer.vhd=VHDL Source Code
 .\src\ctrl.vhd=VHDL Source Code
+.\src\cpu.vhd=VHDL Source Code
+.\src\computer.vhd=VHDL Source Code
 [HierarchyViewer]
-HierarchyInformation=alu|Behavior|0
+HierarchyInformation=alu|Behavior|0 cpu|structure|0
 ShowHide=ShowTopLevel
 Selected=
+[LocalVhdlSets]
+NetlistCompilation=1
+EnableVHDL93Key=0
+EnableVHDL2002Key=1
+EnableVHDL2008Key=0
+EnableVHDL2019Key=0
+DisableVHDL87Key=0
+Syntax RelaxLRM=0
+MaxErrorsKey=100
+CompileWithDebug=0
+OptimizationLevel=3
+DisableRangeChecks=0
+ProtectLevel=0
+IncrementalCompilation=0
+AdditionalOptions=
