@@ -1,8 +1,10 @@
-21
+56
 ~E 1 "../src/acc.vhd" 5 acc
 ~A 1 "../src/acc.vhd" 13 Behavioral
 ~E 1 "../src/alu.vhd" 5 alu
 ~A 1 "../src/alu.vhd" 11 Behavior
+~E 1 "../src/ctrl.vhd" 5 ctrl
+~A 1 "../src/ctrl.vhd" 21 fsm
 ~E 1 "../src/datapath.vhd" 4 dp
 ~A 1 "../src/dp.vhd" 21 struct
 ~E 1 "../src/mux4.vhd" 4 mux4

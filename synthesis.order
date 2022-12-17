@@ -5,3 +5,4 @@ i<>.\src\acc.vhd
 i<>.\src\ref_file.vhd
 i<>.\src\shifter.vhd
 i<>.\src\tristatebuffer.vhd
+i<>.\src\ctrl.vhd

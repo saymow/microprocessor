@@ -5,3 +5,4 @@
 .\src\reg_file.vhd
 .\src\shifter.vhd
 .\src\tristatebuffer.vhd
+.\src\ctrl.vhd

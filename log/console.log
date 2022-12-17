@@ -1,0 +1,136 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Error: COMP96_0019: ctrl.vhd : (281, 4): Keyword 'end' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Error: COMP96_0019: ctrl.vhd : (282, 4): Keyword 'end' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Error: COMP96_0303: ctrl.vhd : (330, 9): Each choice in a case statement can be represented only once.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Error: COMP96_0303: ctrl.vhd : (393, 9): Each choice in a case statement can be represented only once.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Error: COMP96_0078: ctrl.vhd : (447, 6): Unknown identifier "muxsel_trl".
+# Error: COMP96_0133: ctrl.vhd : (447, 6): Cannot find object declaration.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work cpu -2002  $dsn/src/ctrl.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/cpu/src/ctrl.vhd
+# Compile Entity "ctrl"
+# Compile Architecture "fsm" of Entity "ctrl"
+# Error: COMP96_0078: ctrl.vhd : (489, 5): Unknown identifier "rfadrr_ctrl".
+# Error: COMP96_0133: ctrl.vhd : (489, 5): Cannot find object declaration.
+# Compile failure 2 Errors 
