@@ -1,7 +1,5 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: C:/My_Designs/cpu/src/computer.vhd" 
-MESSAGE "Compile Entity "computer"" 
-MESSAGE "Compile Architecture "structure" of Entity "computer"" 
-WARNING ELAB1_0026: "There is no default binding for component "clk_generator". (No entity named "clk_generator" was found)." "C:/My_Designs/cpu/src/computer.vhd" 45 0
-WARNING ELAB1_0026: "There is no default binding for component "output". (No entity named "output" was found)." "C:/My_Designs/cpu/src/computer.vhd" 48 0
-SUCCESS "Compile success 0 Errors 2 Warnings  Analysis time :  62.0 [ms]" 
+MESSAGE "File: C:/My_Designs/cpu/src/ctrl.vhd" 
+MESSAGE "Compile Entity "ctrl"" 
+MESSAGE "Compile Architecture "fsm" of Entity "ctrl"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

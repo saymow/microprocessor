@@ -53,7 +53,7 @@ COMPONENT alu PORT (
 COMPONENT shifter PORT (
 	sel_shift    : IN std_logic_vector(1 DOWNTO 0);
 	input_shift  : IN std_logic_vector(7 DOWNTO 0);
-		output_shift : OUT std_logic_vector(7 DOWNTO 0)
+	output_shift : OUT std_logic_vector(7 DOWNTO 0)
 ); END COMPONENT;
 
 COMPONENT tristatebuffer PORT (
@@ -66,10 +66,14 @@ SIGNAL C_aluout, C_accout, C_rfout, C_muxout, C_shiftout: std_logic_vector(7 DOW
 SIGNAL C_outen: std_logic;
 
 BEGIN
-	UO: mux4 PORT MAP(muxsel_dp, imm_dp, input_dp, C_rfout, C_shiftout, C_muxout);
-	U1: acc PORT MAP(clk_dp, rst_dp, accwr_dp, C_muxout, C_accout);
-	U2: reg_file PORT MAP(clk_dp, rfwr_dp, rfaddr_dp, C_accout, C_rfout);
-	U3: alu PORT MAP(alusel_dp, C_accout, C_rfout, C_aluout);
+	UO: mux4 PORT MAP(muxsel_dp, imm_dp, input_dp, C_rfout, C_shiftout, C_muxout);		
+	
+	U1: acc PORT MAP(clk_dp, rst_dp, accwr_dp, C_muxout, C_accout);				   
+	
+	U2: reg_file PORT MAP(clk_dp, rfwr_dp, rfaddr_dp, C_accout, C_rfout);		 
+	
+	U3: alu PORT MAP(alusel_dp, C_accout, C_rfout, C_aluout);					
+	
 	U4: shifter PORT MAP(shiftsel_dp, C_aluout, C_shiftout);
 	
 	C_outen <= outen_dp OR rst_dp;

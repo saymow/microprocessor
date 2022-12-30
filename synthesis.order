@@ -5,6 +5,6 @@ i<>.\src\acc.vhd
 i<>.\src\ref_file.vhd
 i<>.\src\shifter.vhd
 i<>.\src\tristatebuffer.vhd
-i<>.\src\ctrl.vhd
 i<>.\src\cpu.vhd
 i<>.\src\computer.vhd
+i<>.\src\ctrl1.vhd

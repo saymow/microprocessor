@@ -88,28 +88,25 @@ BEGIN
 		outen_ctrl    <= '0';
 		state 		  <= S1;
 
-		-- Load program memory
-		-- Multiplication program A x B
-		PM(0)  := "01010000"; -- LDI A,0
-		PM(1)  := "00000000"; -- CONSTANT 0
-		PM(2)  := "00100000"; -- STA R[0], A
-		PM(3)  := "01010000"; -- LDI A, 13
-		PM(4)  := "00001010"; -- CONSTANT 10
-		PM(5)  := "00100001"; -- STA r[1], A
-		PM(6)  := "11110000"; -- IN A
-		PM(7)  := "00100010"; -- STA r[2], A
-		PM(8)  := "01110000"; -- JZ out
-		PM(9)  := "00010001"; -- CONSTANT 17, the line we are intended to jump to get out of the "loop" if acc is 0;
-		PM(10) := "00010000"; -- LDA A, r[0]
-		PM(11) := "11000001"; -- ADD A, r[1]
-		PM(12) := "00100000"; -- STA r[0], A
-		PM(13) := "00010010"; -- LDA A, r[2]
-		PM(14) := "11100010"; -- DEC A
-		PM(15) := "00100010"; -- STA r[2], A
-		PM(16) := "10001110"; -- JNZR => jumps to the (current - 4)� line if zero flag is false
-		PM(17) := "00010000"; -- LDA A, r[0] output answer
-		PM(18) := "11110001"; -- OUT A
-		PM(19) := "11110010"; -- HALT
+
+
+		PM(0) := "01010000"; -- LDI A,0
+		PM(1) := "00000000"; -- 0 constant
+		PM(2) := "00100000"; -- STA R[0],A
+		PM(3) := "11110000"; -- IN A
+		PM(4) := "00100001"; -- STA R[1],A
+		PM(5) := "11110000"; -- IN A
+		PM(6) := "00100010"; -- STA R[2],A
+		PM(7) := "01110000"; -- JZ out
+		PM(8) := "00010000";
+		PM(9) := "00010000"; -- repeat: LDA A,R[0]
+		PM(10) := "11000001"; -- ADD A,R[1]
+		PM(11) := "00100000"; -- STA R[0],A
+		PM(12) := "00010010"; -- LDA A,R[2]
+		PM(13) := "11100010"; -- DEC A
+		PM(14) := "00100010"; -- STA R[2],A
+		PM(15) := "10001110"; -- JNZR repeat
+		PM(16) := "11110010"; -- out: HALT
 		
 	ELSIF (clk_ctrl'event and clk_ctrl = '1') THEN
 		CASE state IS
@@ -131,13 +128,14 @@ BEGIN
 			WHEN S2 => -- decode instruction
 				CASE OPCODE IS
 					WHEN NOP  => state <= S1;
+					WHEN LDA => state <= S10;
 					WHEN STA  => state <= S11;
 					WHEN LDM  => state <= S12;
 					WHEN STM  => state <= S13;
 					WHEN LDI  => state <= S14;
 					WHEN JMP  => state <= S210;
 					WHEN JZ   => state <= S220;
-					WHEN JNZ  => state <= S220;
+					WHEN JNZ  => state <= S230;
 					WHEN JP   => state <= S240;
 					WHEN ANDA => state <= S30;
 					WHEN ORA  => state <= S31;
@@ -387,8 +385,8 @@ BEGIN
 				outen_ctrl <= '0';
 				accwr_ctrl <= '1';
 				
-				state <= S8;
-			 -- state <= S9; -- need one extra cycle TO write back result ??
+				-- state <= S8;
+			 	state <= S9; -- need one extra cycle TO write back result ??
 				
 			WHEN S33 => -- SUB		-- OK
 				muxsel_ctrl <= "00";
@@ -534,26 +532,4 @@ BEGIN
 	END IF;
 END PROCESS;
 END fsm;
-		
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	  

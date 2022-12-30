@@ -18,7 +18,7 @@ ARCHITECTURE Behavioral OF reg_file IS
 BEGIN
 	PROCESS(clk_rf, wr_rf, addr_rf)	 
 	BEGIN
-		IF rising_edge(clk_rf) THEN
+		IF (clk_rf'event and clk_rf = '1') THEN
 			IF wr_rf = '1' THEN
 				rf(conv_integer(addr_rf)) <= input_rf;
 			ELSE
