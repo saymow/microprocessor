@@ -30,6 +30,8 @@ FAMILY=Altera MAX7000
 /cpu.vhd=-1
 /computer.vhd=-1
 /ctrl.vhd=-1
+/WORKING.asdb=-1
+/WORKING.awc=-1
 [Files.Data]
 .\src\alu.vhd=VHDL Source Code
 .\src\mux4.vhd=VHDL Source Code
@@ -41,6 +43,8 @@ FAMILY=Altera MAX7000
 .\src\cpu.vhd=VHDL Source Code
 .\src\computer.vhd=VHDL Source Code
 .\src\ctrl.vhd=VHDL Source Code
+.\src\WORKING.asdb=Accelerated Waveform File
+.\src\WORKING.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
 HierarchyInformation=cpu|structure|0
 ShowHide=ShowTopLevel

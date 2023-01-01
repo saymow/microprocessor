@@ -16,9 +16,9 @@ BEGIN
 			WHEN "000" =>
 				output_alu <= inA_alu;
 			WHEN "001" =>
-				output_alu <= inA_alu AND inb_ALU;
+				output_alu <= inA_alu AND inB_alu;
 			WHEN "010" =>
-				output_alu <= inA_alu OR inb_ALU;
+				output_alu <= inA_alu OR inB_alu;
 			WHEN "011" =>
 				output_alu <= NOT inA_alu;
 			WHEN "100" =>

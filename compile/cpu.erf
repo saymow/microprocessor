@@ -2,4 +2,4 @@ WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line break
 MESSAGE "File: C:/My_Designs/cpu/src/ctrl.vhd" 
 MESSAGE "Compile Entity "ctrl"" 
 MESSAGE "Compile Architecture "fsm" of Entity "ctrl"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]" 

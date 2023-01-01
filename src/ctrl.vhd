@@ -21,7 +21,7 @@ ENTITY ctrl IS PORT (
 ARCHITECTURE fsm OF ctrl IS
 TYPE state_type IS (S1,S2,S8,S9,S10,S11,S12,S13,S14,S210,S220,
 S230,S240,S30,S31,S32,S33,S41,S42,S43
-,S44,S45,S46,S51,S52,S99);
+,S44,S45,S46,S51,S52,S99, S999, S1032, S1033, S1030, S1031);
 
 	SIGNAL state: state_type;
 
@@ -106,10 +106,15 @@ BEGIN
 		PM(13) := "11100010"; -- DEC A
 		PM(14) := "00100010"; -- STA R[2],A
 		PM(15) := "10001110"; -- JNZR repeat
-		PM(16) := "11110010"; -- out: HALT
+		PM(16) := "00010000";
+		PM(17) := "11110001";
+		PM(18) := "11110010"; -- out: HALT
 		
 	ELSIF (clk_ctrl'event and clk_ctrl = '1') THEN
 		CASE state IS
+			WHEN S999 =>
+				state <= S8;
+			
 			WHEN S1 => -- fetch instructions
 				IR := PM(PC);
 				OPCODE := IR(7 DOWNTO 4);
@@ -205,7 +210,7 @@ BEGIN
 				shiftsel_ctrl <= "00";
 				outen_ctrl <= '0';
 				
-				state <= S8;
+				state <= S999;
 				
 			WHEN S11 => -- STA		-- OK
 				muxsel_ctrl <= "00";
@@ -350,10 +355,16 @@ BEGIN
 				state <= S1;
 			
 			WHEN S30 => -- ANDA		-- OK
-				muxsel_ctrl <= "00";		  
-				imm_ctrl <= (OTHERS => '0');
 				rfaddr_ctrl <= IR(2 DOWNTO 0);
 				rfwr_ctrl <= '0';
+				
+				state <= S1030;
+			 
+			WHEN S1030 => -- ANDA		-- OK
+				muxsel_ctrl <= "00";		  
+				imm_ctrl <= (OTHERS => '0');
+				-- rfaddr_ctrl <= IR(2 DOWNTO 0);
+				-- rfwr_ctrl <= '0';
 				alusel_ctrl <= "001";
 				shiftsel_ctrl <= "00";
 				outen_ctrl <= '0';
@@ -363,10 +374,16 @@ BEGIN
 			 -- state <= S9; -- need one extra cycle TO write back result ??
 			 
 			WHEN S31 => -- ORA		-- OK
-				muxsel_ctrl <= "00";
-				imm_ctrl <= (OTHERS => '0');
 				rfaddr_ctrl <= IR(2 DOWNTO 0);
 				rfwr_ctrl <= '0';
+				
+				state <= S1031;
+
+			WHEN S1031 => -- ORA		-- OK
+				muxsel_ctrl <= "00";
+				imm_ctrl <= (OTHERS => '0');
+				-- rfaddr_ctrl <= IR(2 DOWNTO 0);
+				-- rfwr_ctrl <= '0';
 				alusel_ctrl <= "010";
 				shiftsel_ctrl <= "00";
 				outen_ctrl <= '0';
@@ -374,25 +391,39 @@ BEGIN
 				
 				state <= S8;
 			 -- state <= S9; -- need one extra cycle TO write back result ??
-			
+			 
 			WHEN S32 => -- ADD		-- OK
-				muxsel_ctrl <= "00";
-				imm_ctrl <= (OTHERS => '0');
 				rfaddr_ctrl <= IR(2 DOWNTO 0);
 				rfwr_ctrl <= '0';
+				
+				state <= S1032;
+				 
+			WHEN S1032 => -- ADD-PT2	-- OK
+				muxsel_ctrl <= "00";
+				imm_ctrl <= (OTHERS => '0');
+				-- rfaddr_ctrl <= IR(2 DOWNTO 0);
+				-- rfwr_ctrl <= '0';
 				alusel_ctrl <= "100";
 				shiftsel_ctrl <= "00";
 				outen_ctrl <= '0';
 				accwr_ctrl <= '1';
 				
-				-- state <= S8;
-			 	state <= S9; -- need one extra cycle TO write back result ??
+				
+				state <= S8;
+			 	-- state <= S9; -- need one extra cycle TO write back result ??
 				
 			WHEN S33 => -- SUB		-- OK
-				muxsel_ctrl <= "00";
-				imm_ctrl <= (OTHERS => '0');
 				rfaddr_ctrl <= IR(2 DOWNTO 0);
 				rfwr_ctrl <= '0';
+
+				
+				state <= S1032;
+
+			WHEN S1033 => -- SUB-PT2	 -- OK
+				muxsel_ctrl <= "00";
+				imm_ctrl <= (OTHERS => '0');
+				-- rfaddr_ctrl <= IR(2 DOWNTO 0);
+				-- rfwr_ctrl <= '0';
 				alusel_ctrl <= "101";
 				shiftsel_ctrl <= "00";
 				outen_ctrl <= '0';

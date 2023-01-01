@@ -1,4 +1,4 @@
-77
+99
 ~E 1 "../src/acc.vhd" 5 acc
 ~A 1 "../src/acc.vhd" 13 Behavioral
 ~E 1 "../src/alu.vhd" 5 alu
