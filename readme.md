@@ -37,11 +37,11 @@
 | `JMP absolute`  | 0110 0000 <br> 00 aaaaaa | PC <= aaaaaa                                                                                                                                 | Absolute unconditional jump                                          |
 | `JMP relative`  | 0110 smmm                | IF (smmm != 0) THEN <br> &nbsp;&nbsp;&nbsp;&nbsp; IF (s == 0) THEN PC = PC + mmm <br> &nbsp;&nbsp;&nbsp;&nbsp; ELSE PC = PC - mmm            | Relative unconditional jump (smmm is a sign and magnitude format)    |
 | `JZ absolute`   | 0111 0000 <br> 00 aaaaaa | IF (A == 0) THEN PC = aaaaaa                                                                                                                 | Absolute jump if A is zero                                           |
-| `JZR absolute`  | 0111 smmm                | IF (A == 0 and smmm != 0) THEN <br> &nbsp;&nbsp;&nbsp;&nbsp; IF (s == 0) THEN PC = PC + mmm <br> &nbsp;&nbsp;&nbsp;&nbsp; ELSE PC = PC - mmm | Relative jump if A is zero (smmm is a sign and magnitude format)     |
+| `JZR relative`  | 0111 smmm                | IF (A == 0 and smmm != 0) THEN <br> &nbsp;&nbsp;&nbsp;&nbsp; IF (s == 0) THEN PC = PC + mmm <br> &nbsp;&nbsp;&nbsp;&nbsp; ELSE PC = PC - mmm | Relative jump if A is zero (smmm is a sign and magnitude format)     |
 | `JNZ absolute`  | 1000 0000 <br> 00 aaaaaa | IF (A != 0) THEN PC = aaaaaa                                                                                                                 | Absolute jump if A is not zero                                       |
 | `JNZR relative` | 1000 smmm                | IF (A != 0 and smmm != 0) THEN <br> &nbsp;&nbsp;&nbsp;&nbsp; IF (s == 0) THEN PC = PC + mmm <br> &nbsp;&nbsp;&nbsp;&nbsp; ELSE PC = PC - mmm | Relative jump if A is not zero (smmm is a sign and magnitude format) |
 | `JP absolute`   | 1001 0000 <br> 00 aaaaaa | IF (A > 0) THEN PC = aaaaaa                                                                                                                  | Absolute jump if A is positive                                       |
-| `JPR absolute`  | 1000 smmm                | IF (A > 0 and smmm != 0) THEN <br> &nbsp;&nbsp;&nbsp;&nbsp; IF (s == 0) THEN PC = PC + mmm <br> &nbsp;&nbsp;&nbsp;&nbsp; ELSE PC = PC - mmm  | Relative jump if A is positive (smmm is a sign and magnitude format) |
+| `JPR relative`  | 1000 smmm                | IF (A > 0 and smmm != 0) THEN <br> &nbsp;&nbsp;&nbsp;&nbsp; IF (s == 0) THEN PC = PC + mmm <br> &nbsp;&nbsp;&nbsp;&nbsp; ELSE PC = PC - mmm  | Relative jump if A is positive (smmm is a sign and magnitude format) |
 
 <h3 align="center">Arithmetic and logical instructions</h3>
 
